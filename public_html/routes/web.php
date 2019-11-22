@@ -13,11 +13,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/menu', 'MenuController@index')->name('home');
+Route::get('/menu', 'MenuController@index');
+Route::get('/', 'MenuController@index')->name('home');
+Route::get('/buy/{id}', 'CustomersOrderController@do')->name('buy');
 
 Route::group( ['middleware' => 'auth' ], function()
 {
-    Route::get('/', 'HomeController@index')->name('home');
     Route::get('/orders', 'CustomersOrderController@index')->name('orders');
 });
 

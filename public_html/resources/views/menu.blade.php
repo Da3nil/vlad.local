@@ -20,7 +20,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{$product['name']}}</h5>
                                         <p class="card-text">{{$product['description']}}</p>
-                                        <a href="#" class="stretched-link">Добавить в корзину</a>
+                                        <a href="{{url("buy", ['id' => $product['id']])}}" class="stretched-link">Заказать</a>
                                     </div>
                                     <div class="card-footer">
                                         <div class="row">

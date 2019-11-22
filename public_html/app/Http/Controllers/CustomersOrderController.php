@@ -10,4 +10,9 @@ class CustomersOrderController extends Controller
     {
         return view('orders');
     }
+
+    public function do($id)
+    {
+        return $id;
+    }
 }
