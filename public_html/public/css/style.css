@@ -1,0 +1,11 @@
+.my-card img {
+    height: 220px;
+}
+
+.my-card .card:hover {
+    box-shadow: 5px 5px rgba(0,0,0,0.3);
+}
+
+.card-int {
+    color: #ff4f59;
+}
