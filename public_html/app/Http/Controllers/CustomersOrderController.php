@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 
 class CustomersOrderController extends Controller
@@ -13,6 +14,7 @@ class CustomersOrderController extends Controller
 
     public function do($id)
     {
-        return $id;
+        $product = Product::all()->find($id);
+        return view('neworder', ['product' => $product]);
     }
 }

@@ -13,7 +13,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/menu', 'MenuController@index');
+Route::get('/menu', 'MenuController@index')->name('menu');
 Route::get('/', 'MenuController@index')->name('home');
 Route::get('/buy/{id}', 'CustomersOrderController@do')->name('buy');
 

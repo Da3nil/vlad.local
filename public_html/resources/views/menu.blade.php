@@ -8,10 +8,6 @@
                 <div class="card-header">Меню</div>
 
                 <div class="card-body">
-
-                    @auth
-{{--                          <a class="btn btn-primary mb-3" href="#">Добавить новое блюдо</a>--}}
-                    @endauth
                         <div class="row my-card row-eq-height">
                         @foreach($products as $key => $product)
                             <div class="col-md-6 col-lg-4 col-xs-12 p-3">
