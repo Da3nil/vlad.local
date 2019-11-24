@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">Заказы</div>
+                    <div class="card-header">Клиенты</div>
 
                     <div class="card-body">
                         @if (session('status'))
