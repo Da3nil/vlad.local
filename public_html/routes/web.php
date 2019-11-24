@@ -16,10 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/menu', 'MenuController@index')->name('menu');
 Route::get('/', 'MenuController@index')->name('home');
 Route::get('/buy/{id}', 'CustomersOrderController@do')->name('buy');
+Route::post('/create', 'CustomersOrderController@create')->name('create');
 
 Route::group( ['middleware' => 'auth' ], function()
 {
     Route::get('/orders', 'CustomersOrderController@index')->name('orders');
+    Route::get('/customers', 'CustomersController@show')->name('customers');
 });
 
 Auth::routes();

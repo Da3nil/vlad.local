@@ -18,8 +18,8 @@ class CreateCustomersOrdersTable extends Migration
 
             $table->date('or_date')->default(null);
             $table->bigInteger('c_id')->default(0);
-            $table->text('or_goods');
-            $table->integer('or_table')->default(null);
+            $table->bigInteger('or_sum')->default(0);
+            $table->bigInteger('or_product');
 
             $table->timestamps();
         });

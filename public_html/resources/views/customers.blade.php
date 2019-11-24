@@ -20,30 +20,30 @@
                                         white-space: nowrap;"
                                class="table">
                             <tr>
-                                <th class="border-top-0">ID заказа</th>
                                 <th class="border-top-0">ID клиента</th>
-                                <th class="border-top-0">ID товара</th>
-                                <th class="border-top-0">Стоимость</th>
-                                <th class="border-top-0">Дата</th>
+                                <th class="border-top-0">Мобильный</th>
+                                <th class="border-top-0">ФИО клиента</th>
+                                <th class="border-top-0">Общая прибыль</th>
+                                <th class="border-top-0">Дата последнего заказа</th>
                             </tr>
 
 
-                        @foreach($orders as $order)
+                        @foreach($customers as $customer)
                             <tr>
                                 <td>
-                                    {{$order->id}}
+                                    {{$customer->id}}
                                 </td>
                                 <td>
-                                    {{$order->c_id}}
+                                    {{$customer->c_phone}}
                                 </td>
                                 <td>
-                                    {{$order->or_product}}
+                                    {{$customer->c_name}}
                                 </td>
                                 <td>
-                                    {{$order->or_sum}} Р
+                                    {{$customer->c_total_profit}}
                                 </td>
                                 <td>
-                                    {{$order->or_date}}
+                                    {{$customer->c_last_date_arrival}}
                                 </td>
                             </tr>
                         @endforeach

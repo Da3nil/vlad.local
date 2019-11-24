@@ -10,7 +10,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/jquery.maskedinput.js') }}" defer type="text/javascript"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -40,15 +41,15 @@
                             </li>
                         @else
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('menu') }}">{{ __('Меню') }}</a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('orders') }}">{{ __('Заказы') }}</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="">{{ __('Меню') }}</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="">{{ __('Клиентская база') }}</a>
+                                <a class="nav-link" href="{{ route('customers') }}">{{ __('Клиентская база') }}</a>
                             </li>
                         @endguest
                     </ul>

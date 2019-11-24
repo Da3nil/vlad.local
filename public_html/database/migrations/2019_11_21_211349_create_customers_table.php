@@ -16,8 +16,10 @@ class CreateCustomersTable extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->string('c_name');
-            $table->integer('c_total_profit');
+            $table->string('c_phone')->unique();
+            $table->string('c_name')->default('Неизвестно');
+            $table->integer('c_total_profit')->default(0);
+            $table->date('c_last_date_arrival');
 
             $table->timestamps();
         });
